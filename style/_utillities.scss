@@ -1,0 +1,45 @@
+@mixin flexContent(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+};
+
+@mixin button(){
+  display: inline-block;
+  font-size: 1rem;
+  background: rgba(13, 62, 168, 0.418);
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+@mixin cardFront(){
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 5px;
+  padding: 10px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+// Animations
+@keyframes animation-up-down{
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animation-left-right{
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

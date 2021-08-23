@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style/main.css">
+  <title> SMOKE .Inc</title>
+</head>
+
+<body>
+  <section class="showcase">
+    <header>
+      <h2 class="logo"><a href="index.html">SMOKE Inc.</a></h2>
+      <h2 class="toggle"></h2>
+    </header>
+
+    <section class="contact-page">
+      <h1 class="title">Contact</h1>
+      <section id="contact">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input id="hidden" type="hidden" name="form-name" value="contact">
+          <p class="hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          </p>
+          <div class="row">
+            <div class="input50">
+              <label for="first-name">First Name</label>
+              <input name="first-name" id="first-name" type="text" placeholder="First Name" required>
+            </div>
+            <div class="input50">
+              <label for="last-name">Last Name</label>
+              <input name="last-name" id="last-name" type="text" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input50">
+              <label for="email">Email</label>
+              <input name="email" id="email" type="email" placeholder="Email" required>
+            </div>
+            <div class="input50">
+              <label for="subject">Subject</label>
+              <input name="subject" type="text" placeholder="Subject">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input100">
+              <label for="message">Message</label>
+              <textarea name="message" placeholder="Message" id="message" required></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input100">
+              <input type="submit" value="Send">
+            </div>
+          </div>
+        </form>
+      </section>
+    </section>
+  </section>
+  <div class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="active-page" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="social">
+    <ul>
+      <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+      <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a></li>
+      <li><a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok fa-2x"></i></a></li>
+    </ul>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

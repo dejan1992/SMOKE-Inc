@@ -1,0 +1,204 @@
+// Tablets and Smaller
+
+@media(max-width: 1000px){
+
+  header{
+    padding: 30px 50px;
+  }
+
+  .showcase{
+    &.active{
+      right: 200px;
+    }
+  }
+
+    .nav{
+      width: 200px;
+    }
+  
+// Product-page
+
+.boxes{
+  padding: 0;
+}
+
+    // About-page
+  .about-page{
+    padding: 0 20px;
+  
+    .title{
+      margin: 120px auto;
+      margin-bottom: 70px;
+      font-size: 3rem;
+    }
+  
+    .about-container{
+      .item-1{
+        padding: 20px;
+        grid-column: 1/4;
+        grid-row: 1;
+    
+      }
+      .item-2{
+        padding: 20px ;
+        grid-column: 1/4;
+        grid-row: 2;
+      }
+
+      .item-3{
+        padding: 20px ;
+        grid-column: 1/4;
+        grid-row: 3;
+      }
+
+      .item-4{
+        padding: 20px ;
+        grid-column: 1/4;
+        grid-row: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item-5{
+        padding: 20px ;
+        grid-column: 1/4;
+        grid-row: 5;
+      }
+
+      .item-6{
+        padding: 20px ;
+        grid-column: 1/4;
+        grid-row: 6;
+      }
+      .item-7{
+        padding: 20px ;
+        grid-column: 1/4;
+        grid-row: 7;
+        p{
+          font-size: 1.6rem;
+          text-align: center;
+          
+        }
+      }
+  }
+}
+
+// Contact-page
+.contact-page{
+  padding: 0 30px;
+  height: auto;
+}
+
+#contact{
+  form{
+    .row{
+      display:block;
+    }
+    .input100{
+
+      margin: 0;
+    }
+    .input50{
+      width: 100%;
+      margin: 0;
+    }
+    margin-bottom: 30px;
+    }
+  }
+}
+
+  @media(max-width: 720px){
+    header{
+      .logo{
+        font-size: 2.2rem;
+      }
+    }
+
+    .showcase{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      min-height: 100vh;
+      transition: all 0.5s;
+    
+    
+      .text{
+        position: relative;
+        @include flexContent();
+        flex-direction: column;
+        // margin-top: 80px;
+        padding: 0 10px;
+        color: #fff;
+        z-index: 10;
+        text-align: center;
+    
+    
+        h2{
+          font-size: 4rem;
+          line-height: 4rem;
+        }
+    
+        h3{
+          line-height:3rem;
+          font-size: 3rem;
+          margin-bottom: 40px;
+        }
+        p{
+          display: none;
+        }
+      }
+      }
+
+//Product-page
+.showcase{
+  .products-page{
+    background:linear-gradient( rgba(13, 62, 168, 0.418) 100%, rgba(0, 0, 0, 0.5)100%),url("/img/jens-johnsson-qFYBki6u3Ik-unsplash.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+
+    .title{
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+    }
+
+    .boxes{
+      margin-bottom: 20px;
+      padding: 0 20px;
+   
+    .card{
+      width: 370px;
+      height: 350px;
+      margin: 8px;
+
+      .card-title{
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+      }
+    }
+    }
+  }
+}
+
+// About-page
+ .about-page{  
+    .title{
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      }
+
+      .about-container{
+        margin-bottom: 20px;
+      }
+}
+
+  .social{
+    z-index: 0;
+    width: 200px;
+  }
+}

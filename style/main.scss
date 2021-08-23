@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap');
+@import "utillities";
+@import "products-page";
+@import "about-page";
+@import "contact-page";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+
+header{
+  @include flexContent();
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 100px;
+
+
+  .logo{
+    font-family: 'Bebas Neue', Arial, cursive;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #fff;
+    z-index: 10;
+
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .toggle{
+    background: url("../img/hamburger.png") no-repeat center center/cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 10;
+
+  &.active{
+    background: url("../img/close.png") no-repeat center center/cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+
+.showcase{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.5s;
+  overflow-x: hidden;
+
+
+  .text{
+    position: relative;
+    margin-top: 120px;
+    padding: 0 100px;
+    color: #fff;
+    z-index: 10;
+
+
+    h2{
+      text-transform: uppercase;
+      font-size: 5rem;
+      line-height: 4rem;
+      transform: translateX(-100px);
+      opacity: 0;
+      animation: animation-left-right 1.5s forwards ease;
+    }
+
+    h3{
+      line-height:4rem;
+      font-size: 3rem;
+      transform: translateX(100px);
+      opacity: 0;
+      animation: animation-left-right 1.5s forwards ease;
+    }
+
+    p{
+      font-size: 1.2em;
+      margin: 15px 0;
+      max-width: 600px;
+      transform: translateY(100px);
+      opacity: 0;
+      animation: animation-up-down 1.5s forwards ease;
+    }
+
+    a{
+      @include button();
+      transform: translateY(100px);
+      opacity: 0;
+      animation: animation-up-down 1.5s forwards ease;
+        &:hover{
+          transform: scale(1.2);
+        }
+    }
+  }
+
+  video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    z-index: 5;
+  }
+
+  &.active{
+    right: 300px;
+  }
+}
+
+// Navigation
+
+.nav{
+  z-index: 0;
+  @include flexContent();
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+ul{
+  display: none;
+  list-style: none;
+  text-align: center;
+  li{
+    padding: 7px 0;
+  }
+  a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+    &.active-page{
+      color:rgb(13, 62, 168);
+    }
+  }
+}
+}
+
+// Social
+
+.social{
+  z-index: 0;
+  width: 300px;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  ul{
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    text-align: center;
+    li{
+      padding: 7px 0;
+      transition: all 0.3s;
+      
+      &:hover{
+        transform: scale(1.2);
+
+      }
+    }
+    a{
+      text-decoration: none;
+      color: #111;
+    }
+  }
+}
+
+// import media queries
+@import "media";
